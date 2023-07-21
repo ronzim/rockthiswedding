@@ -1,5 +1,5 @@
 // Composables
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 
 const routes = [
   {
@@ -21,7 +21,7 @@ const routes = [
 
 const router = createRouter({
   // history: createWebHistory(process.env.BASE_URL),
-  history: createWebHistory(import.meta.env.VITE_APP_BASE_PATH),
+  history: createWebHashHistory(import.meta.env.VITE_APP_BASE_PATH),
   routes,
 });
 
