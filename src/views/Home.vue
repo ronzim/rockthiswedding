@@ -17,7 +17,7 @@
           "
           class="d-flex flex-column justify-center align-center"
         >
-          <h1 class="text-h4 font-weight-bold mb-4">Lisa & Mattia</h1>
+          <h1 class="text-h4 font-weight-bold mb-4 name-font">Lisa & Mattia</h1>
           <h4 class="subheading">31 Maggio 2024</h4>
           <v-icon
             icon="fas fa-angles-down"
@@ -54,6 +54,11 @@ export default {
 
 .moving-arrows {
   animation: updown 2s ease infinite;
+}
+
+.name-font {
+  font-family: "Brush Script MT", cursive !important;
+  font-size: xxx-large !important;
 }
 
 @keyframes updown {
