@@ -32,19 +32,19 @@ export default {
       directions: [
         {
           title: "Dov'è la sposa?",
-          link: "https://www.google.com/maps?saddr=My+Location&daddr=Via+Aldo+Moro+41b+Treviolo",
+          link: "https://www.google.com/maps/search/?api=1&query=Via%20Aldo%20Moro%2C%2041B%2C%2024048%20Treviolo%20BG",
         },
         {
           title: "Dov'è lo sposo?",
-          link: "https://www.google.com/maps?saddr=My+Location&daddr=Via+Lungobrembo+18+Curno",
+          link: "https://www.google.com/maps/search/?api=1&query=Via+Lungobrembo+18+Curno",
         },
         {
           title: "Dov'è il matrimonio?",
-          link: "https://www.google.com/maps?saddr=My+Location&daddr=Chiesa+Marigolda",
+          link: "https://www.google.com/maps/search/?api=1&query=Chiesa+Annunciazione+Marigolda",
         },
         {
           title: "Dov'è il ricevimento?",
-          link: "https://www.google.com/maps?saddr=My+Location&daddr=Agriturismo+Larice+Clusone",
+          link: "https://www.google.com/maps/search/?api=1&query=Agriturismo%20Larice%2C%20strada%20per%20San%20Lucio%2C%20Clusone%2C%20BG",
         },
       ],
     };
