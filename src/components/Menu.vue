@@ -73,7 +73,7 @@
 </template>
 
 <script lang="ts">
-import { nextTick } from "process";
+import { nextTick } from "vue";
 
 export default {
   data() {
