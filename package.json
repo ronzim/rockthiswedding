@@ -7,7 +7,7 @@
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix --ignore-path .gitignore",
-    "deploy": "npm run build && mv dist docs && git add docs && git commit -m 'deploy' && git push origin master"
+    "deploy": "npm run build && cp dist/* && cp dist/**/* && docs && git add docs && git commit -m 'deploy' && git push origin master"
   },
   "dependencies": {
     "@mdi/font": "7.0.96",

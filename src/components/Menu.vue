@@ -73,6 +73,8 @@
 </template>
 
 <script lang="ts">
+import { nextTick } from "process";
+
 export default {
   data() {
     return {
@@ -101,9 +103,11 @@ export default {
       // if (evt.target instanceof HTMLElement) {
       //   evt.target.scrollIntoView({ behavior: "smooth" });
       // }
-      scrollTo({
-        top: document.body.scrollHeight,
-        behavior: "smooth",
+      nextTick(() => {
+        scrollTo({
+          top: document.body.scrollHeight,
+          behavior: "smooth",
+        });
       });
     },
   },
