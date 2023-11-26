@@ -1,5 +1,5 @@
 <template>
-  <v-container class="ma-0 pa-0">
+  <v-container class="ma-0 pa-0" style="max-width: none">
     <v-img
       :height="screenHeight"
       aspect-ratio="4/3"
@@ -18,7 +18,11 @@
           class="d-flex flex-column justify-center align-center"
         >
           <h1 class="text-h4 font-weight-bold mb-4 name-font">Lisa & Mattia</h1>
-          <h4 class="subheading">31 Maggio 2024</h4>
+          <h4 class="subheading text-center">
+            31 Maggio 2024 <br />
+            Curno, Marigolda <br />
+            h. 11.00
+          </h4>
           <v-icon
             icon="fas fa-angles-down"
             size="large"
@@ -29,12 +33,12 @@
       </div>
     </v-img>
 
-    <Directions />
+    <Menu />
   </v-container>
 </template>
 
 <script setup lang="ts">
-import Directions from "../components/Directions.vue";
+import Menu from "../components/Menu.vue";
 </script>
 
 <script lang="ts">
