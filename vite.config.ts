@@ -8,10 +8,10 @@ import { fileURLToPath, URL } from "node:url";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: process.env.NODE_ENV === "production" ? "/rockthiswedding/" : "./",
-  build: {
-    outDir: "docs",
-  },
+  // base: process.env.NODE_ENV === "production" ? "/rockthiswedding/" : "./",
+  // build: {
+  //   outDir: "docs",
+  // },
   plugins: [
     vue({
       template: { transformAssetUrls },
