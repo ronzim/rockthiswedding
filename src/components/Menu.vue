@@ -73,8 +73,6 @@
 </template>
 
 <script lang="ts">
-import { nextTick } from "vue";
-
 export default {
   data() {
     return {
@@ -103,12 +101,12 @@ export default {
       // if (evt.target instanceof HTMLElement) {
       //   evt.target.scrollIntoView({ behavior: "smooth" });
       // }
-      nextTick(() => {
+      setTimeout(() => {
         scrollTo({
           top: document.body.scrollHeight,
           behavior: "smooth",
         });
-      });
+      }, 500);
     },
   },
 };
