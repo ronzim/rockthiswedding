@@ -12,20 +12,19 @@
 @font-face {
   font-family: "The-Yoshi";
   font-style: normal;
-  src: local("The-Yoshi"), url(./public/The-Yoshi.ttf) format("truetype");
+  src: local("The-Yoshi"), url(./The-Yoshi.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Cocogoose";
   font-style: normal;
-  src: local("Cocogoose"), url(./public/Cocogoose.ttf) format("truetype");
+  src: local("Cocogoose"), url(./Cocogoose.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Cocogoose-light";
   font-style: normal;
-  src: local("Cocogoose-light"),
-    url(./public/Cocogoose-light.ttf) format("truetype");
+  src: local("Cocogoose-light"), url(./Cocogoose-light.ttf) format("truetype");
 }
 
 .v-application .v-application--wrap * {
