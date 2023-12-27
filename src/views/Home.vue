@@ -17,7 +17,7 @@
           "
           class="d-flex flex-column justify-center align-center"
         >
-          <h1 class="text-h4 font-weight-bold mb-4 title-font">
+          <h1 class="text-h4 font-weight-bold pt-2 mb-4 title-font">
             Lisa e Mattia
           </h1>
           <h4 class="subheading text-center sub-font">

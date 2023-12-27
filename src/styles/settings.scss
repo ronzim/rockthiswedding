@@ -18,13 +18,14 @@
 @font-face {
   font-family: "Cocogoose";
   font-style: normal;
-  src: local("Cocogoose"), url(./Cocogoose.ttf) format("truetype");
+  src: local("Cocogoose"), url(./Cocogoose-light.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Cocogoose-light";
   font-style: normal;
-  src: local("Cocogoose-light"), url(./Cocogoose-light.ttf) format("truetype");
+  src: local("Cocogoose-light"),
+    url(./Cocogoose-light-italic.ttf) format("truetype");
 }
 
 .v-application .v-application--wrap * {

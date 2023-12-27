@@ -16,6 +16,7 @@
         <v-expansion-panel-text class="text-center">
           Chiesa dell'Annunciazione <br />
           Via Abruzzi (Marigolda), Curno
+          <br />La sposa <b> dovrebbe </b> arrivare alle ore 11.00
           <v-btn
             block
             variant="outlined"
@@ -37,6 +38,7 @@
           </template>
         </v-expansion-panel-title>
         <v-expansion-panel-text class="text-center">
+          In seguito vi aspettiamo per festeggiare presso <br />
           Agriturismo Larice <br />
           Strada per San Lucio, Clusone
           <v-btn
@@ -60,6 +62,7 @@
           </template>
         </v-expansion-panel-title>
         <v-expansion-panel-text class="text-center">
+          Cliccando qui trovate il form per confermare la vostra presenza
           <v-btn
             block
             variant="outlined"
@@ -90,8 +93,15 @@
           </template>
         </v-expansion-panel-title>
         <v-expansion-panel-text class="text-center">
-          IBAN: IT 00 A 00000 00000 000000000000 <br />
-          Intestato a: Lisa & Mattia <br />
+          Il regalo più grande sarà condividere con voi questo giorno di gioia.
+          Se però vi divertite ad ascoltare i racconti dei nostri viaggi, più o
+          meno disagevoli, e volete sponsorizzare le nostre prossime avventure,
+          per esempio per sostituire la tenda con un camper, qui di seguito
+          trovate i nostri riferimenti:
+          <br />
+          IBAN: IT 72I0503411103000000002590
+          <br />
+          Intestato a: Lisa Lozza e Mattia Ronzoni<br />
         </v-expansion-panel-text>
       </v-expansion-panel>
     </v-expansion-panels>
