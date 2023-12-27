@@ -9,6 +9,25 @@
   $color-pack: false
 );
 
+@font-face {
+  font-family: "The-Yoshi";
+  font-style: normal;
+  src: local("The-Yoshi"), url(./public/The-Yoshi.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Cocogoose";
+  font-style: normal;
+  src: local("Cocogoose"), url(./public/Cocogoose.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Cocogoose-light";
+  font-style: normal;
+  src: local("Cocogoose-light"),
+    url(./public/Cocogoose-light.ttf) format("truetype");
+}
+
 .v-application .v-application--wrap * {
-  font-family: "Lucida Console" !important;
+  font-family: "The-Yoshi" !important;
 }

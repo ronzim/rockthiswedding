@@ -4,8 +4,8 @@
       :height="screenHeight"
       aspect-ratio="4/3"
       cover
-      src="/foto.jpg"
-      style="opacity: 0.7"
+      src="/foto2.jpg"
+      style="opacity: 0.9"
     >
       <div class="d-flex fill-height justify-center align-end text-gray pb-4">
         <div
@@ -17,8 +17,10 @@
           "
           class="d-flex flex-column justify-center align-center"
         >
-          <h1 class="text-h4 font-weight-bold mb-4 name-font">Lisa & Mattia</h1>
-          <h4 class="subheading text-center">
+          <h1 class="text-h4 font-weight-bold mb-4 title-font">
+            Lisa e Mattia
+          </h1>
+          <h4 class="subheading text-center sub-font">
             31 Maggio 2024 <br />
             Curno, Marigolda <br />
             h. 11.00
@@ -60,9 +62,13 @@ export default {
   animation: updown 2s ease infinite;
 }
 
-.name-font {
-  font-family: "Brush Script MT", cursive !important;
-  font-size: xxx-large !important;
+.title-font {
+  font-family: "The-Yoshi" !important;
+  font-size: x-large !important;
+}
+.sub-font {
+  font-family: "Cocogoose-light" !important;
+  font-size: small !important;
 }
 
 @keyframes updown {

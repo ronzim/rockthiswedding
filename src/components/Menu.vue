@@ -54,7 +54,7 @@
       <!-- Conferma -->
       <v-expansion-panel @click="scrollIntoView" elevation="0">
         <v-expansion-panel-title disable-icon-rotate>
-          <h3>RSVP</h3>
+          <h3>Conferma</h3>
           <template v-slot:actions>
             <v-icon icon="fas fa-check"> </v-icon>
           </template>
@@ -144,6 +144,7 @@ export default {
 }
 .v-expansion-panel {
   border-radius: 0% !important;
-  background-color: rgba(42, 109, 196, 0.564);
+  background-color: rgba(255, 218, 81, 0.8);
+  font-family: "Cocogoose-light" !important;
 }
 </style>

@@ -34,4 +34,11 @@ export default defineConfig({
   server: {
     port: 3000,
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "@/assets/styles/main.scss";`,
+      },
+    },
+  },
 });
