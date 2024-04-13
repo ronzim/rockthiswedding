@@ -13,7 +13,7 @@
         <v-expansion-panel-text class="text-center">
           Chiesa dell'Annunciazione <br />
           Via Abruzzi (Marigolda), Curno
-          <br />La sposa <b @dblclick="hack = true"> dovrebbe </b>arrivare
+          <br />La sposa <b @dblclick="hack = true" @click="hack = true"> dovrebbe </b>arrivare
           alle ore
           11.00
           <v-btn block variant="outlined" :href="directions[0].link" class="my-2" v-bind:key="directions[0].title">
