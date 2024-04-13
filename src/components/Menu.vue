@@ -1,8 +1,5 @@
 <template>
-  <v-container
-    class="d-flex flex-column justify-center align-center pa-0"
-    style="max-width: none"
-  >
+  <v-container class="d-flex flex-column justify-center align-center pa-0" style="max-width: none">
     <!-- accordion -->
     <v-expansion-panels variant="accordion">
       <!-- Cerimonia -->
@@ -17,13 +14,7 @@
           Chiesa dell'Annunciazione <br />
           Via Abruzzi (Marigolda), Curno
           <br />La sposa <b> dovrebbe </b> arrivare alle ore 11.00
-          <v-btn
-            block
-            variant="outlined"
-            :href="directions[0].link"
-            class="my-2"
-            v-bind:key="directions[0].title"
-          >
+          <v-btn block variant="outlined" :href="directions[0].link" class="my-2" v-bind:key="directions[0].title">
             Indicazioni
             <v-icon icon="fas fa-route" size="small" class="ml-4"> </v-icon>
           </v-btn>
@@ -41,13 +32,7 @@
           In seguito vi aspettiamo per festeggiare presso <br />
           Agriturismo Larice <br />
           Strada per San Lucio, Clusone
-          <v-btn
-            block
-            variant="outlined"
-            :href="directions[1].link"
-            class="my-2"
-            v-bind:key="directions[1].title"
-          >
+          <v-btn block variant="outlined" :href="directions[1].link" class="my-2" v-bind:key="directions[1].title">
             Indicazioni
             <v-icon icon="fas fa-route" size="small" class="ml-4"> </v-icon>
           </v-btn>
@@ -63,12 +48,7 @@
         </v-expansion-panel-title>
         <v-expansion-panel-text class="text-center">
           Cliccando qui trovate il form per confermare la vostra presenza
-          <v-btn
-            block
-            variant="outlined"
-            href="https://forms.gle/M7P9UHTyr1pn7Ha86"
-            class="my-2"
-          >
+          <v-btn block variant="outlined" href="https://forms.gle/M7P9UHTyr1pn7Ha86" class="my-2">
             Vai alla conferma
             <v-icon icon="fas fa-arrow-right" size="small" class="ml-4">
             </v-icon>
@@ -104,6 +84,32 @@
           Intestato a: Lisa Lozza e Mattia Ronzoni<br />
         </v-expansion-panel-text>
       </v-expansion-panel>
+      <!-- Bomboniere -->
+      <v-expansion-panel v-if="isTheMoment" @click="scrollIntoView" elevation="0">
+        <v-expansion-panel-title disable-icon-rotate>
+          <h3>Istruzioni Bomboniere</h3>
+          <template v-slot:actions>
+            <v-icon icon="fas fa-pen-ruler"> </v-icon>
+          </template>
+        </v-expansion-panel-title>
+        <v-expansion-panel-text class="text-center">
+          <v-carousel hide-delimiter-background height="200">
+            <template v-slot:prev="{ props }">
+              <v-btn icon="fas fa-arrow-left" variant="text" color="black" @click="props.onClick"></v-btn>
+            </template>
+            <template v-slot:next="{ props }">
+              <v-btn icon="fas fa-arrow-right" variant="text" @click="props.onClick"></v-btn>
+            </template>
+            <v-carousel-item v-for="instruction in instructions" :key="instruction.title">
+              <v-card class="mx-auto my-2" height="200" max-width="300" @click=" downloadFile(instruction.path)">
+                <v-img :src="instruction.image" class="mt-2" height="150" aspect-ratio="16/9">
+                  <v-card-title :style="`text-align: ${instruction.side}`">{{ instruction.title }}</v-card-title>
+                </v-img>
+              </v-card>
+            </v-carousel-item>
+          </v-carousel>
+        </v-expansion-panel-text>
+      </v-expansion-panel>
     </v-expansion-panels>
   </v-container>
 </template>
@@ -130,7 +136,31 @@ export default {
           link: "https://www.google.com/maps/search/?api=1&query=Agriturismo%20Larice%2C%20strada%20per%20San%20Lucio%2C%20Clusone%2C%20BG",
         },
       ],
+      instructions: [{
+        title: '1 e 2',
+        image: 'https://www.lego.com/cdn/cs/set/assets/blt1a9f250bdba1b5ed/10329_alt3.png?format=webply&fit=bounds&quality=70&width=800&height=800&dpr=1.5',
+        path: '/10329_1_2.pdf',
+        side: "left"
+      },
+      {
+        title: '3 e 4',
+        image: 'https://www.lego.com/cdn/cs/set/assets/blt059add8055d830e5/10329_alt2.png?format=webply&fit=bounds&quality=70&width=800&height=800&dpr=1.5',
+        path: '/10329_3_4.pdf',
+        side: "right"
+
+      },
+      {
+        title: '5 e 6',
+        image: 'https://www.lego.com/cdn/cs/set/assets/bltc358bade4815ab79/10329_alt4.png?format=webply&fit=bounds&quality=70&width=800&height=800&dpr=1.5',
+        path: '/10329_5_6.pdf',
+        side: "left"
+      }]
     };
+  },
+  computed: {
+    isTheMoment() {
+      return new Date() > new Date("2024-04-13T17:00:00");
+    },
   },
   methods: {
     scrollIntoView(evt: Event) {
@@ -142,7 +172,10 @@ export default {
           top: document.body.scrollHeight,
           behavior: "smooth",
         });
-      }, 500);
+      }, 250);
+    },
+    downloadFile(path: string) {
+      window.open(path, "_blank");
     },
   },
 };
@@ -152,6 +185,7 @@ export default {
 .v-expansion-panel-header {
   padding: 0px 24px !important;
 }
+
 .v-expansion-panel {
   border-radius: 0% !important;
   background-color: rgba(255, 218, 81, 0.8);
