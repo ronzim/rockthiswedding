@@ -13,7 +13,9 @@
         <v-expansion-panel-text class="text-center">
           Chiesa dell'Annunciazione <br />
           Via Abruzzi (Marigolda), Curno
-          <br />La sposa <b> dovrebbe </b> arrivare alle ore 11.00
+          <br />La sposa <b @dblclick="hack = true"> dovrebbe </b>arrivare
+          alle ore
+          11.00
           <v-btn block variant="outlined" :href="directions[0].link" class="my-2" v-bind:key="directions[0].title">
             Indicazioni
             <v-icon icon="fas fa-route" size="small" class="ml-4"> </v-icon>
@@ -79,7 +81,7 @@
           per esempio per sostituire la tenda con un camper, qui di seguito
           trovate i nostri riferimenti:
           <br />
-          IBAN: IT 72I0503411103000000002590
+          <span>IBAN: IT 72I0503411103000000002590</span>
           <br />
           Intestato a: Lisa Lozza e Mattia Ronzoni<br />
         </v-expansion-panel-text>
@@ -118,6 +120,7 @@
 export default {
   data() {
     return {
+      hack: false,
       directions: [
         // {
         //   title: "Dov'è la sposa?",
@@ -138,28 +141,28 @@ export default {
       ],
       instructions: [{
         title: '1 e 2',
-        image: 'https://www.lego.com/cdn/cs/set/assets/blt1a9f250bdba1b5ed/10329_alt3.png?format=webply&fit=bounds&quality=70&width=800&height=800&dpr=1.5',
+        image: '/10329_alt3.webp',
         path: '/10329_1_2.pdf',
         side: "left"
       },
       {
         title: '3 e 4',
-        image: 'https://www.lego.com/cdn/cs/set/assets/blt059add8055d830e5/10329_alt2.png?format=webply&fit=bounds&quality=70&width=800&height=800&dpr=1.5',
+        image: '/10329_alt4.webp',
         path: '/10329_3_4.pdf',
-        side: "right"
+        side: "left"
 
       },
       {
         title: '5 e 6',
-        image: 'https://www.lego.com/cdn/cs/set/assets/bltc358bade4815ab79/10329_alt4.png?format=webply&fit=bounds&quality=70&width=800&height=800&dpr=1.5',
+        image: '/10329_alt2.webp',
         path: '/10329_5_6.pdf',
-        side: "left"
+        side: "right"
       }]
     };
   },
   computed: {
     isTheMoment() {
-      return new Date() > new Date("2024-04-13T17:00:00");
+      return this.hack || new Date() > new Date("2024-05-31T22:00:00");
     },
   },
   methods: {
