@@ -20,6 +20,11 @@
             Indicazioni
             <v-icon icon="fas fa-route" size="small" class="ml-4"> </v-icon>
           </v-btn>
+          <v-btn block variant="outlined"
+            :href="'https://www.google.com/maps/d/edit?mid=1hLE7y_m36UuIXp_BD5Ktsw2e4-YNCd4&usp=sharing'" class="my-2">
+            Parcheggi
+            <v-icon icon="fas fa-square-parking" size="small" class="ml-4"> </v-icon>
+          </v-btn>
         </v-expansion-panel-text>
       </v-expansion-panel>
       <!-- Ricevimento -->
@@ -37,6 +42,23 @@
           <v-btn block variant="outlined" :href="directions[1].link" class="my-2" v-bind:key="directions[1].title">
             Indicazioni
             <v-icon icon="fas fa-route" size="small" class="ml-4"> </v-icon>
+          </v-btn>
+        </v-expansion-panel-text>
+      </v-expansion-panel>
+      <!-- Album foto -->
+      <v-expansion-panel @click="scrollIntoView" elevation="0">
+        <v-expansion-panel-title disable-icon-rotate>
+          <h3>Condivisione foto</h3>
+          <template v-slot:actions>
+            <v-icon icon="fas fa-images"> </v-icon>
+          </template>
+        </v-expansion-panel-title>
+        <v-expansion-panel-text class="text-center">
+          Clicca qui per accedere all'album condiviso e condividere le tue foto:
+          <v-btn block variant="outlined" href="https://photos.app.goo.gl/RRpE1ZgKVgqzBMiQ7" class="my-2">
+            Vai all'album
+            <v-icon icon="fas fa-arrow-right" size="small" class="ml-4">
+            </v-icon>
           </v-btn>
         </v-expansion-panel-text>
       </v-expansion-panel>
@@ -117,6 +139,8 @@
 </template>
 
 <script lang="ts">
+import router from '@/router';
+
 export default {
   data() {
     return {
